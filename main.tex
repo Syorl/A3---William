@@ -170,6 +170,13 @@ Qualidade é um termo usado de várias formas. Crosby (1979) a definiu como conf
 
 A diferença entre essas definições tem consequência prática. Um sistema pode seguir à risca uma especificação mal escrita e, ainda assim, não servir ao usuário. Por isso a garantia da qualidade precisa examinar os requisitos com o mesmo cuidado dedicado ao código que os implementa.
 
+\subsection{Erro, defeito e falha}
+\label{sec:erro}
+
+Para falar de garantia da qualidade é preciso separar três conceitos que costumam ser tratados como sinônimos. Tudo começa com um engano ou erro humano (\textit{mistake/error}), cometido por um analista ou desenvolvedor ao interpretar um requisito ou escrever um algoritmo. Esse engano fica registrado no software como um defeito ou falta (\textit{defect/fault}), o que no dia a dia se chama de \textit{bug}. Quando o trecho com o defeito é executado em certas condições e produz um resultado diferente do especificado, ocorre a falha (\textit{failure}), que o usuário ou o ambiente externo percebe (MOLINARI, 2003; SOMMERVILLE, 2019).
+
+Um exemplo ajuda a separar os três conceitos. Suponha que a regra de negócio de um caixa eletrônico permita saques de valor menor ou igual ao saldo. Ao implementá-la, o programador escreve a condição \texttt{valor < saldo} e esquece o caso de igualdade: esse é o erro. A condição incorreta, gravada no código-fonte, é o defeito. Enquanto os clientes sacarem valores abaixo do saldo, nada de errado acontece; a falha só aparece quando alguém tenta sacar exatamente o valor disponível e tem o pedido recusado. Um defeito pode, portanto, passar muito tempo escondido, já que só se manifesta quando o trecho defeituoso é executado em condições específicas (ISTQB, 2023). Esse exemplo será retomado nas Seções~\ref{sec:planejamento} e \ref{sec:tecnicas}.
+
 % =====================================================================
 % REFERÊNCIAS
 % =====================================================================
@@ -184,6 +191,8 @@ A diferença entre essas definições tem consequência prática. Um sistema pod
 CROSBY, Philip B. \textbf{Quality is free}: the art of making quality certain. New York: McGraw-Hill, 1979.
 
 ISO/IEC. \textbf{ISO/IEC 25010:2023}: systems and software engineering: systems and software Quality Requirements and Evaluation (SQuaRE): product quality model. Geneva: ISO/IEC, 2023.
+
+ISTQB. \textbf{Certified tester foundation level syllabus}: version 4.0. [\textit{S. l.}]: International Software Testing Qualifications Board, 2023.
 
 KOSCIANSKI, André; SOARES, Michel dos Santos. \textbf{Qualidade de software}: aprenda as metodologias e técnicas mais modernas para o desenvolvimento de software. 2. ed. São Paulo: Novatec, 2007.
 
