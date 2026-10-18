@@ -177,6 +177,13 @@ Para falar de garantia da qualidade é preciso separar três conceitos que costu
 
 Um exemplo ajuda a separar os três conceitos. Suponha que a regra de negócio de um caixa eletrônico permita saques de valor menor ou igual ao saldo. Ao implementá-la, o programador escreve a condição \texttt{valor < saldo} e esquece o caso de igualdade: esse é o erro. A condição incorreta, gravada no código-fonte, é o defeito. Enquanto os clientes sacarem valores abaixo do saldo, nada de errado acontece; a falha só aparece quando alguém tenta sacar exatamente o valor disponível e tem o pedido recusado. Um defeito pode, portanto, passar muito tempo escondido, já que só se manifesta quando o trecho defeituoso é executado em condições específicas (ISTQB, 2023). Esse exemplo será retomado nas Seções~\ref{sec:planejamento} e \ref{sec:tecnicas}.
 
+\subsection{Garantia da qualidade, controle da qualidade e testes}
+\label{sec:vv}
+
+Também é preciso distinguir Garantia da Qualidade (\textit{Quality Assurance}, QA), Controle da Qualidade (\textit{Quality Control}, QC) e testes. Os testes executam o programa para revelar falhas. O controle da qualidade inspeciona os artefatos entregues para verificar se seguem as especificações. A garantia da qualidade tem alcance maior, atua no nível da gestão e é preventiva (VIDAL, 2021): ela audita e melhora o próprio processo de desenvolvimento, definindo diretrizes, padrões de documentação e métodos de trabalho que diminuem a chance de um erro humano virar defeito no código-fonte (PRESSMAN; MAXIM, 2021).
+
+Sommerville (2019) acrescenta a essa distinção a diferença entre verificação e validação, formulada por Boehm. A verificação pergunta se o produto está sendo construído corretamente, isto é, se atende à especificação. A validação pergunta se o produto certo está sendo construído, ou seja, se atende ao que o cliente realmente precisa (BOEHM, 1979 \textit{apud} SOMMERVILLE, 2019). Revisões, inspeções e testes servem às duas perguntas, e cabe à SQA definir quando e como cada uma será respondida ao longo do projeto.
+
 % =====================================================================
 % REFERÊNCIAS
 % =====================================================================
@@ -201,6 +208,8 @@ MOLINARI, Leonardo. \textbf{Testes de software}: produzindo sistemas melhores e 
 PRESSMAN, Roger S.; MAXIM, Bruce R. \textbf{Engenharia de software}: uma abordagem profissional. 9. ed. Porto Alegre: AMGH, 2021.
 
 SOMMERVILLE, Ian. \textbf{Engenharia de software}. 10. ed. São Paulo: Pearson Education do Brasil, 2019.
+
+VIDAL, Diego. \textbf{Introdução à garantia de qualidade de software}. ResearchGate, 2021.
 \end{singlespace}
 
 \end{document}
