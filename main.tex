@@ -184,6 +184,31 @@ Também é preciso distinguir Garantia da Qualidade (\textit{Quality Assurance},
 
 Sommerville (2019) acrescenta a essa distinção a diferença entre verificação e validação, formulada por Boehm. A verificação pergunta se o produto está sendo construído corretamente, isto é, se atende à especificação. A validação pergunta se o produto certo está sendo construído, ou seja, se atende ao que o cliente realmente precisa (BOEHM, 1979 \textit{apud} SOMMERVILLE, 2019). Revisões, inspeções e testes servem às duas perguntas, e cabe à SQA definir quando e como cada uma será respondida ao longo do projeto.
 
+\subsection{Qualidade de processo: CMMI e MPS.BR}
+
+A qualidade do produto depende, em grande parte, da qualidade do processo que o produz. Partindo dessa premissa, os modelos de maturidade descrevem práticas de engenharia e de gestão que uma organização deve adotar de forma gradual. O CMMI (\textit{Capability Maturity Model Integration}), desenvolvido originalmente pelo \textit{Software Engineering Institute} (SEI) da Universidade Carnegie Mellon, organiza essa evolução em cinco níveis de maturidade. O MPS.BR (Melhoria de Processo do Software Brasileiro), criado em 2003 pela Associação para Promoção da Excelência do Software Brasileiro (SOFTEX), adapta a mesma lógica à realidade de empresas brasileiras, sobretudo micro, pequenas e médias. Ele divide a evolução em sete níveis, de G a A, o que permite avançar em etapas menores e com custo de avaliação mais baixo (KOSCIANSKI; SOARES, 2007). O Quadro~\ref{quadro:maturidade} mostra a correspondência aproximada entre os dois modelos.
+
+\begin{table}[htbp]
+\centering
+\caption{Correspondência entre os níveis de maturidade do CMMI e do MPS.BR}
+\label{quadro:maturidade}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{6cm} X}
+\toprule
+\textbf{Nível CMMI} & \textbf{Níveis MPS.BR correspondentes} \\
+\midrule
+1 Inicial & Sem correspondente \\
+2 Gerenciado & G Parcialmente Gerenciado; F Gerenciado \\
+3 Definido & E Parcialmente Definido; D Largamente Definido; C Definido \\
+4 Quantitativamente Gerenciado & B Gerenciado Quantitativamente \\
+5 Em Otimização & A Em Otimização \\
+\bottomrule
+\end{tabularx}
+
+\fonte{elaborado pelo autor com base em Koscianski e Soares (2007).}
+\end{table}
+
+Nos dois modelos, a garantia da qualidade é exigida logo nos primeiros níveis. No CMMI, a área de processo Garantia da Qualidade de Processo e Produto (PPQA) pertence ao nível 2; no MPS.BR, o processo de Garantia da Qualidade faz parte do nível F (KOSCIANSKI; SOARES, 2007). Uma organização, portanto, não chega a níveis mais altos de maturidade sem antes ter alguém verificando, de forma objetiva, se o processo definido está sendo seguido.
+
 % =====================================================================
 % REFERÊNCIAS
 % =====================================================================
