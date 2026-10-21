@@ -209,6 +209,43 @@ A qualidade do produto depende, em grande parte, da qualidade do processo que o 
 
 Nos dois modelos, a garantia da qualidade é exigida logo nos primeiros níveis. No CMMI, a área de processo Garantia da Qualidade de Processo e Produto (PPQA) pertence ao nível 2; no MPS.BR, o processo de Garantia da Qualidade faz parte do nível F (KOSCIANSKI; SOARES, 2007). Uma organização, portanto, não chega a níveis mais altos de maturidade sem antes ter alguém verificando, de forma objetiva, se o processo definido está sendo seguido.
 
+\subsection{Qualidade de produto: a ISO/IEC 25010:2023}
+
+Na qualidade de produto, a principal referência atual é a ISO/IEC 25010:2023, parte da série SQuaRE (\textit{Systems and software Quality Requirements and Evaluation}), que substituiu a antiga ISO/IEC 9126 (ISO/IEC, 2023; SOCIEDADE BRASILEIRA DE COMPUTAÇÃO, 2024). Em relação à edição de 2011, a versão de 2023 renomeou a usabilidade para capacidade de interação, trocou a portabilidade pela flexibilidade, incluiu a segurança operacional (\textit{safety}) como característica própria e transferiu o modelo de qualidade em uso para a ISO/IEC 25019 (ISO/IEC, 2023).
+
+O modelo de qualidade de produto passou a ter nove características, descritas no Quadro~\ref{quadro:iso}. Cada uma se divide em subcaracterísticas, que servem de base para definir as métricas de qualidade.
+
+\begin{table}[htbp]
+\centering
+\caption{Características de qualidade de produto da ISO/IEC 25010:2023}
+\label{quadro:iso}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{4.2cm} X}
+\toprule
+\textbf{Característica} & \textbf{O que avalia} \\
+\midrule
+Adequação funcional & Se as funções oferecidas atendem às necessidades declaradas e implícitas dos usuários. \\
+\addlinespace
+Eficiência de desempenho & O desempenho em relação aos recursos usados, como tempo de resposta, consumo de recursos e capacidade. \\
+\addlinespace
+Compatibilidade & A capacidade de trocar informações com outros sistemas e de dividir o mesmo ambiente com eles. \\
+\addlinespace
+Capacidade de interação & A facilidade com que os usuários interagem com o sistema para realizar suas tarefas (antiga usabilidade). \\
+\addlinespace
+Confiabilidade & A capacidade de executar as funções especificadas, sob condições definidas, por um período de tempo, incluindo disponibilidade e tolerância a falhas. \\
+\addlinespace
+Segurança da informação (\textit{security}) & A proteção de informações e dados, incluindo confidencialidade, integridade e autenticidade. \\
+\addlinespace
+Manutenibilidade & A facilidade de modificar o sistema, o que envolve modularidade, analisabilidade e testabilidade. \\
+\addlinespace
+Flexibilidade & A capacidade de se adaptar a mudanças de requisitos, de contexto de uso ou de ambiente, incluindo escalabilidade e instalação. \\
+\addlinespace
+Segurança operacional (\textit{safety}) & A capacidade de evitar estados em que vidas humanas, saúde, patrimônio ou meio ambiente fiquem em risco. \\
+\bottomrule
+\end{tabularx}
+
+\fonte{adaptado de ISO/IEC (2023).}
+\end{table}
+
 % =====================================================================
 % REFERÊNCIAS
 % =====================================================================
@@ -231,6 +268,8 @@ KOSCIANSKI, André; SOARES, Michel dos Santos. \textbf{Qualidade de software}: a
 MOLINARI, Leonardo. \textbf{Testes de software}: produzindo sistemas melhores e mais confiáveis. São Paulo: Érica, 2003.
 
 PRESSMAN, Roger S.; MAXIM, Bruce R. \textbf{Engenharia de software}: uma abordagem profissional. 9. ed. Porto Alegre: AMGH, 2021.
+
+SOCIEDADE BRASILEIRA DE COMPUTAÇÃO. \textbf{Uma análise da indústria com base na ISO 25010}. Porto Alegre: Biblioteca Digital SOL/SBC, 2024.
 
 SOMMERVILLE, Ian. \textbf{Engenharia de software}. 10. ed. São Paulo: Pearson Education do Brasil, 2019.
 
