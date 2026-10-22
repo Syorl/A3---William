@@ -246,6 +246,29 @@ Segurança operacional (\textit{safety}) & A capacidade de evitar estados em que
 \fonte{adaptado de ISO/IEC (2023).}
 \end{table}
 
+\subsection{Métricas de qualidade}
+\label{sec:metricas}
+
+As métricas são indicadores quantitativos usados para acompanhar tanto a saúde do código quanto a eficácia do processo (KOSCIANSKI; SOARES, 2007). No plano técnico, uma das mais conhecidas é a complexidade ciclomática, proposta por McCabe (1976). Ela mede o número de caminhos independentes no grafo de fluxo de controle de um módulo e pode ser calculada pela Equação~\eqref{eq:mccabe}:
+
+\begin{equation}
+V(G) = E - N + 2P
+\label{eq:mccabe}
+\end{equation}
+
+\noindent em que $E$ é o número de arestas, $N$ o número de nós e $P$ o número de componentes conectados do grafo. McCabe sugeriu 10 como limite superior razoável para um módulo. Acima disso, o código tende a esconder mais defeitos e fica mais difícil de testar e manter, pois $V(G)$ também indica o número mínimo de casos de teste necessários para percorrer todos os caminhos independentes.
+
+Outros indicadores comuns são a densidade de defeitos por mil linhas de código (KLOC), o percentual de cobertura de testes automatizados, o grau de acoplamento entre classes e métricas de confiabilidade em operação, como o Tempo Médio Entre Falhas (MTBF, \textit{Mean Time Between Failures}) e o Tempo Médio Para Reparo (MTTR, \textit{Mean Time To Repair}). Pressman e Maxim (2021) destacam ainda a eficiência na remoção de defeitos (\textit{Defect Removal Efficiency}, DRE), que indica quanto do total de defeitos a equipe conseguiu remover antes da entrega, conforme a Equação~\eqref{eq:dre}:
+
+\begin{equation}
+DRE = \frac{E}{E + D}
+\label{eq:dre}
+\end{equation}
+
+\noindent em que $E$ é o número de erros encontrados antes da entrega e $D$ o número de defeitos encontrados depois dela. O valor ideal é 1, situação em que nenhum defeito chega ao usuário. Acompanhar o DRE ao longo de vários projetos mostra se as atividades de prevenção e de avaliação estão funcionando.
+
+Coletar métricas sem um propósito definido gera números que ninguém usa. A abordagem \textit{Goal-Question-Metric} (GQM) propõe partir de um objetivo, por exemplo reduzir os defeitos que chegam à produção; formular perguntas que indiquem se o objetivo está sendo alcançado, como ``quantos defeitos são encontrados após cada entrega?''; e só então escolher as métricas que respondem a essas perguntas (BASILI; CALDIERA; ROMBACH, 1994). Segundo a Sociedade Brasileira de Computação (2024), coletar métricas de forma sistemática dá aos gestores dados concretos para decidir e permite perceber a degradação da arquitetura antes que ela cause problemas.
+
 % =====================================================================
 % REFERÊNCIAS
 % =====================================================================
@@ -257,6 +280,8 @@ Segurança operacional (\textit{safety}) & A capacidade de evitar estados em que
 \setlength{\parskip}{10pt}
 \raggedright
 
+BASILI, Victor R.; CALDIERA, Gianluigi; ROMBACH, H. Dieter. The goal question metric approach. \textit{In}: MARCINIAK, John J. (ed.). \textbf{Encyclopedia of software engineering}. New York: Wiley, 1994.
+
 CROSBY, Philip B. \textbf{Quality is free}: the art of making quality certain. New York: McGraw-Hill, 1979.
 
 ISO/IEC. \textbf{ISO/IEC 25010:2023}: systems and software engineering: systems and software Quality Requirements and Evaluation (SQuaRE): product quality model. Geneva: ISO/IEC, 2023.
@@ -264,6 +289,8 @@ ISO/IEC. \textbf{ISO/IEC 25010:2023}: systems and software engineering: systems 
 ISTQB. \textbf{Certified tester foundation level syllabus}: version 4.0. [\textit{S. l.}]: International Software Testing Qualifications Board, 2023.
 
 KOSCIANSKI, André; SOARES, Michel dos Santos. \textbf{Qualidade de software}: aprenda as metodologias e técnicas mais modernas para o desenvolvimento de software. 2. ed. São Paulo: Novatec, 2007.
+
+MCCABE, Thomas J. A complexity measure. \textbf{IEEE Transactions on Software Engineering}, v. SE-2, n. 4, p. 308-320, dez. 1976.
 
 MOLINARI, Leonardo. \textbf{Testes de software}: produzindo sistemas melhores e mais confiáveis. São Paulo: Érica, 2003.
 
