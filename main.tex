@@ -270,6 +270,21 @@ DRE = \frac{E}{E + D}
 Coletar métricas sem um propósito definido gera números que ninguém usa. A abordagem \textit{Goal-Question-Metric} (GQM) propõe partir de um objetivo, por exemplo reduzir os defeitos que chegam à produção; formular perguntas que indiquem se o objetivo está sendo alcançado, como ``quantos defeitos são encontrados após cada entrega?''; e só então escolher as métricas que respondem a essas perguntas (BASILI; CALDIERA; ROMBACH, 1994). Segundo a Sociedade Brasileira de Computação (2024), coletar métricas de forma sistemática dá aos gestores dados concretos para decidir e permite perceber a degradação da arquitetura antes que ela cause problemas.
 
 % =====================================================================
+% 4 PRÁTICAS
+% =====================================================================
+\section{Práticas e estratégias para prevenção, identificação e correção de falhas}
+\label{sec:praticas}
+
+\subsection{Planejamento da qualidade e \textit{Shift-Left}}
+\label{sec:planejamento}
+
+No dia a dia do desenvolvimento, a garantia da qualidade começa pelo planejamento. Planejar a qualidade é decidir, ainda nas fases iniciais do projeto, quais características da ISO/IEC 25010 terão prioridade na arquitetura, quais ferramentas de verificação serão usadas e quais critérios objetivos indicarão que uma funcionalidade pode ser entregue (OLIVEIRA JUNIOR, 2020).
+
+O resultado desse planejamento costuma ser registrado em um plano de garantia da qualidade. A IEEE Std 730-2014 orienta que esse documento descreva as atividades de SQA previstas para o projeto, os responsáveis por elas, os padrões e procedimentos que serão seguidos, as revisões e auditorias programadas e os registros que serão mantidos como evidência (IEEE, 2014). Com o plano escrito, as expectativas de qualidade ficam explícitas para toda a equipe, e é possível verificar ao longo do projeto se o que foi combinado está sendo cumprido.
+
+Trazer essas decisões para o começo do ciclo de vida é o que se chama de \textit{Shift-Left Testing}: a validação começa nos requisitos e no desenho da arquitetura, sem esperar a codificação (PRESSMAN; MAXIM, 2021). O programa de estudos do ISTQB (2023) inclui essa ideia entre os princípios do teste, ao afirmar que testar cedo economiza tempo e dinheiro, porque os defeitos removidos nas primeiras fases deixam de gerar defeitos derivados nos artefatos seguintes.
+
+% =====================================================================
 % REFERÊNCIAS
 % =====================================================================
 \section*{Referências}
@@ -284,6 +299,8 @@ BASILI, Victor R.; CALDIERA, Gianluigi; ROMBACH, H. Dieter. The goal question me
 
 CROSBY, Philip B. \textbf{Quality is free}: the art of making quality certain. New York: McGraw-Hill, 1979.
 
+IEEE. \textbf{IEEE Std 730-2014}: IEEE standard for software quality assurance processes. New York: IEEE, 2014.
+
 ISO/IEC. \textbf{ISO/IEC 25010:2023}: systems and software engineering: systems and software Quality Requirements and Evaluation (SQuaRE): product quality model. Geneva: ISO/IEC, 2023.
 
 ISTQB. \textbf{Certified tester foundation level syllabus}: version 4.0. [\textit{S. l.}]: International Software Testing Qualifications Board, 2023.
@@ -293,6 +310,8 @@ KOSCIANSKI, André; SOARES, Michel dos Santos. \textbf{Qualidade de software}: a
 MCCABE, Thomas J. A complexity measure. \textbf{IEEE Transactions on Software Engineering}, v. SE-2, n. 4, p. 308-320, dez. 1976.
 
 MOLINARI, Leonardo. \textbf{Testes de software}: produzindo sistemas melhores e mais confiáveis. São Paulo: Érica, 2003.
+
+OLIVEIRA JUNIOR, A. C. \textbf{A importância da Garantia da Qualidade de Software no desenvolvimento de sistemas}. 2020. Trabalho de Conclusão de Curso. Repositório Institucional Cogna, 2020.
 
 PRESSMAN, Roger S.; MAXIM, Bruce R. \textbf{Engenharia de software}: uma abordagem profissional. 9. ed. Porto Alegre: AMGH, 2021.
 
