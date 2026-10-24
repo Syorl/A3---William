@@ -284,6 +284,30 @@ O resultado desse planejamento costuma ser registrado em um plano de garantia da
 
 Trazer essas decisões para o começo do ciclo de vida é o que se chama de \textit{Shift-Left Testing}: a validação começa nos requisitos e no desenho da arquitetura, sem esperar a codificação (PRESSMAN; MAXIM, 2021). O programa de estudos do ISTQB (2023) inclui essa ideia entre os princípios do teste, ao afirmar que testar cedo economiza tempo e dinheiro, porque os defeitos removidos nas primeiras fases deixam de gerar defeitos derivados nos artefatos seguintes.
 
+Como boa parte das falhas mais graves em produção vem de requisitos ambíguos, incompletos ou contraditórios, o planejamento usa técnicas de validação estática das especificações e modelagem por exemplos, como o Desenvolvimento Orientado ao Comportamento (\textit{Behavior-Driven Development}, BDD). Quando desenvolvedores, especialistas em qualidade e representantes do negócio escrevem juntos os cenários de aceitação antes de a programação começar, defeitos de concepção deixam de entrar no sistema.
+
+No BDD, os cenários costumam ser escritos em Gherkin, uma linguagem estruturada com as palavras-chave Dado, Quando e Então, que pode ser lida por pessoas de negócio e, ao mesmo tempo, executada como teste automatizado. O Quadro~\ref{quadro:bdd} retoma o exemplo do caixa eletrônico apresentado na Seção~\ref{sec:erro}. Se esse cenário tivesse sido escrito antes da codificação, o caso do saque igual ao saldo estaria documentado desde o início, e o erro de implementação seria detectado na primeira execução do teste.
+
+\begin{table}[htbp]
+\centering
+\caption{Cenário de aceitação escrito em Gherkin}
+\label{quadro:bdd}
+\fbox{%
+\begin{minipage}{0.8\textwidth}
+\vspace{0.2cm}
+\small\ttfamily
+\textbf{Funcionalidade:} Saque em caixa eletrônico\\[2pt]
+\hspace*{1em}\textbf{Cenário:} Saque igual ao saldo disponível\\
+\hspace*{2em}\textbf{Dado} que a conta tem saldo de R\$ 500,00\\
+\hspace*{2em}\textbf{Quando} o cliente solicita um saque de R\$ 500,00\\
+\hspace*{2em}\textbf{Então} o saque é autorizado\\
+\hspace*{2em}\textbf{E} o saldo da conta passa a ser R\$ 0,00
+\vspace{0.2cm}
+\end{minipage}}
+
+\fonte{elaborado pelo autor.}
+\end{table}
+
 % =====================================================================
 % REFERÊNCIAS
 % =====================================================================
