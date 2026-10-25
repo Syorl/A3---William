@@ -308,6 +308,14 @@ No BDD, os cenários costumam ser escritos em Gherkin, uma linguagem estruturada
 \fonte{elaborado pelo autor.}
 \end{table}
 
+\subsection{Revisões técnicas e análise estática}
+
+Na fase de construção, as revisões técnicas e a análise estática passam a ser as principais barreiras contra defeitos. As revisões variam em formalidade. Na revisão informal, um colega lê o código e faz comentários. No \textit{walkthrough}, o autor conduz os colegas pelo artefato e explica sua lógica. A inspeção é a forma mais rigorosa: Fagan (1976), que formalizou a técnica na IBM, previu um moderador responsável por conduzir o processo e etapas sequenciais de visão geral, preparação individual, reunião de inspeção, retrabalho e acompanhamento, com registro dos defeitos encontrados.
+
+Hoje, a forma mais comum é a revisão por pares feita em ferramentas de controle de versão: outros membros da equipe inspecionam o código recém-escrito antes que as alterações sejam incorporadas ao repositório principal (FATEC, [s.d.]). Um teste dinâmico mostra que há um sintoma; a revisão olha o próprio texto do programa e pode encontrar a causa, além de vulnerabilidades de segurança, desvios de padrões de projeto, gargalos de desempenho e problemas de legibilidade.
+
+Ferramentas de análise estática complementam esse trabalho. Elas examinam a árvore sintática do código, sem executá-lo, à procura de estruturas problemáticas (\textit{code smells}), vazamentos de recursos e violações de padrões de codificação, e podem calcular automaticamente métricas como a complexidade ciclomática. Somadas à revisão humana, espalham o conhecimento da arquitetura pela equipe e melhoram a qualidade interna do software (SOMMERVILLE, 2019).
+
 % =====================================================================
 % REFERÊNCIAS
 % =====================================================================
@@ -322,6 +330,10 @@ No BDD, os cenários costumam ser escritos em Gherkin, uma linguagem estruturada
 BASILI, Victor R.; CALDIERA, Gianluigi; ROMBACH, H. Dieter. The goal question metric approach. \textit{In}: MARCINIAK, John J. (ed.). \textbf{Encyclopedia of software engineering}. New York: Wiley, 1994.
 
 CROSBY, Philip B. \textbf{Quality is free}: the art of making quality certain. New York: McGraw-Hill, 1979.
+
+FAGAN, Michael E. Design and code inspections to reduce errors in program development. \textbf{IBM Systems Journal}, v. 15, n. 3, p. 182-211, 1976.
+
+FATEC. 16 métodos para garantir a qualidade do software e melhorar a entrega. \textbf{Revista Anima Terra}, São Paulo, ed. 21, [s.d.].
 
 IEEE. \textbf{IEEE Std 730-2014}: IEEE standard for software quality assurance processes. New York: IEEE, 2014.
 
