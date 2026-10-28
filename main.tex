@@ -316,6 +316,13 @@ Hoje, a forma mais comum é a revisão por pares feita em ferramentas de control
 
 Ferramentas de análise estática complementam esse trabalho. Elas examinam a árvore sintática do código, sem executá-lo, à procura de estruturas problemáticas (\textit{code smells}), vazamentos de recursos e violações de padrões de codificação, e podem calcular automaticamente métricas como a complexidade ciclomática. Somadas à revisão humana, espalham o conhecimento da arquitetura pela equipe e melhoram a qualidade interna do software (SOMMERVILLE, 2019).
 
+\subsection{Técnicas de projeto de testes}
+\label{sec:tecnicas}
+
+A verificação estática não encontra tudo. Para os defeitos que só aparecem em execução são necessários testes, e os casos de teste podem ser projetados a partir de duas perspectivas. Nas técnicas de caixa-preta, o testador parte da especificação e não olha o código. A partição de equivalência divide os dados de entrada em classes que o sistema deve tratar da mesma forma, de modo que basta testar um representante de cada classe. A análise de valor-limite completa essa técnica ao concentrar os testes nas fronteiras entre as classes, onde os erros de programação são mais frequentes (MOLINARI, 2003; PRESSMAN; MAXIM, 2021). No exemplo do caixa eletrônico, as classes seriam ``valor menor ou igual ao saldo'' e ``valor maior que o saldo'', e a análise de valor-limite levaria a testar exatamente o saque igual ao saldo, o que revelaria o defeito.
+
+Nas técnicas de caixa-branca, o teste é projetado a partir da estrutura interna do código. Os critérios mais comuns são a cobertura de instruções, que exige executar cada linha ao menos uma vez, e a cobertura de decisões, que exige que cada condição seja avaliada como verdadeira e como falsa. A complexidade ciclomática, vista na Seção~\ref{sec:metricas}, indica quantos casos são necessários para percorrer todos os caminhos independentes de um módulo (PRESSMAN; MAXIM, 2021). As duas perspectivas se complementam: a caixa-preta encontra funções ausentes ou mal interpretadas, e a caixa-branca encontra trechos de código que nenhum teste exercitou.
+
 % =====================================================================
 % REFERÊNCIAS
 % =====================================================================
