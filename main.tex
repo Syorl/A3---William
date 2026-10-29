@@ -323,6 +323,33 @@ A verificação estática não encontra tudo. Para os defeitos que só aparecem 
 
 Nas técnicas de caixa-branca, o teste é projetado a partir da estrutura interna do código. Os critérios mais comuns são a cobertura de instruções, que exige executar cada linha ao menos uma vez, e a cobertura de decisões, que exige que cada condição seja avaliada como verdadeira e como falsa. A complexidade ciclomática, vista na Seção~\ref{sec:metricas}, indica quantos casos são necessários para percorrer todos os caminhos independentes de um módulo (PRESSMAN; MAXIM, 2021). As duas perspectivas se complementam: a caixa-preta encontra funções ausentes ou mal interpretadas, e a caixa-branca encontra trechos de código que nenhum teste exercitou.
 
+\subsection{Níveis de teste e a Pirâmide de Testes}
+
+Para que os testes cubram bem o sistema a um custo razoável, costuma-se organizá-los segundo a Pirâmide de Testes, proposta por Cohn (2009) e resumida no Quadro~\ref{quadro:piramide}.
+
+\begin{table}[htbp]
+\centering
+\caption{Níveis da Pirâmide de Testes}
+\label{quadro:piramide}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{3.6cm} X}
+\toprule
+\textbf{Nível} & \textbf{O que valida} \\
+\midrule
+Topo: sistema, aceitação e ponta a ponta & Comportamento global da solução na perspectiva de uso real, incluindo testes não funcionais de carga, estresse e segurança. Poucos testes, mais lentos e caros de manter. \\
+\addlinespace
+Meio: integração & Comunicação entre módulos, bancos de dados e APIs. \\
+\addlinespace
+Base: unidade & Menores componentes lógicos (métodos, funções e classes), isoladamente. Muitos testes, rápidos e baratos de manter. \\
+\bottomrule
+\end{tabularx}
+
+\fonte{elaborado pelo autor com base em Cohn (2009), Molinari (2003), Sommerville (2019) e Vidal (2021).}
+\end{table}
+
+Os testes de unidade formam a base porque são rápidos e baratos de manter. O Desenvolvimento Orientado a Testes (\textit{Test-Driven Development}, TDD) reforça essa camada ao exigir que o programador escreva o teste automatizado antes da implementação. Beck (2003) descreve o ciclo em três passos: escrever um teste que falha, escrever o código mínimo para que ele passe e, em seguida, refatorar o código mantendo os testes aprovados. Esse ritmo tende a gerar código mais coeso e menos acoplado (SOMMERVILLE, 2019).
+
+Os testes de integração, no meio da pirâmide, verificam se módulos, bancos de dados e interfaces de programação de aplicações (APIs) se comunicam corretamente. No topo ficam os testes de sistema, de aceitação e ponta a ponta (\textit{end-to-end}), além dos testes não funcionais (MOLINARI, 2003; VIDAL, 2021). Em todos os níveis, suítes de regressão automatizadas são necessárias para garantir que corrigir um defeito ou acrescentar uma funcionalidade não quebre partes do sistema que já estavam estáveis.
+
 % =====================================================================
 % REFERÊNCIAS
 % =====================================================================
@@ -335,6 +362,10 @@ Nas técnicas de caixa-branca, o teste é projetado a partir da estrutura intern
 \raggedright
 
 BASILI, Victor R.; CALDIERA, Gianluigi; ROMBACH, H. Dieter. The goal question metric approach. \textit{In}: MARCINIAK, John J. (ed.). \textbf{Encyclopedia of software engineering}. New York: Wiley, 1994.
+
+BECK, Kent. \textbf{Test-driven development}: by example. Boston: Addison-Wesley, 2003.
+
+COHN, Mike. \textbf{Succeeding with agile}: software development using Scrum. Boston: Addison-Wesley, 2009.
 
 CROSBY, Philip B. \textbf{Quality is free}: the art of making quality certain. New York: McGraw-Hill, 1979.
 
