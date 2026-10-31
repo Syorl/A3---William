@@ -350,6 +350,37 @@ Os testes de unidade formam a base porque são rápidos e baratos de manter. O D
 
 Os testes de integração, no meio da pirâmide, verificam se módulos, bancos de dados e interfaces de programação de aplicações (APIs) se comunicam corretamente. No topo ficam os testes de sistema, de aceitação e ponta a ponta (\textit{end-to-end}), além dos testes não funcionais (MOLINARI, 2003; VIDAL, 2021). Em todos os níveis, suítes de regressão automatizadas são necessárias para garantir que corrigir um defeito ou acrescentar uma funcionalidade não quebre partes do sistema que já estavam estáveis.
 
+\subsection{Princípios do teste}
+
+O ISTQB (2023), entidade que mantém um programa internacional de certificação de testadores, resume em sete princípios o funcionamento geral da atividade de teste, apresentados no Quadro~\ref{quadro:istqb}. Dois deles se ligam diretamente à SQA. O terceiro sustenta a estratégia \textit{Shift-Left}, discutida na Seção~\ref{sec:planejamento}. O sétimo lembra que a ausência de defeitos conhecidos não garante um produto útil, o que retoma a diferença entre verificação e validação vista na Seção~\ref{sec:vv}.
+
+\begin{table}[htbp]
+\centering
+\caption{Os sete princípios do teste segundo o ISTQB}
+\label{quadro:istqb}
+\begin{tabularx}{\textwidth}{>{\centering\arraybackslash}p{0.6cm} >{\raggedright\arraybackslash}p{5cm} X}
+\toprule
+\textbf{Nº} & \textbf{Princípio} & \textbf{Significado} \\
+\midrule
+1 & O teste mostra a presença de defeitos & Testes revelam defeitos, mas não provam que o software está livre deles. \\
+\addlinespace
+2 & Teste exaustivo é impossível & Testar todas as combinações só é viável em casos triviais; por isso se usam técnicas e prioridades. \\
+\addlinespace
+3 & Testar cedo economiza tempo e dinheiro & Defeitos removidos cedo não geram defeitos derivados nas etapas seguintes. \\
+\addlinespace
+4 & Defeitos se agrupam & Poucos componentes costumam concentrar a maior parte dos defeitos. \\
+\addlinespace
+5 & Testes se desgastam & Repetir os mesmos testes deixa de revelar defeitos novos, e eles precisam ser revisados. \\
+\addlinespace
+6 & O teste depende do contexto & Um sistema médico e um aplicativo de compras exigem abordagens diferentes. \\
+\addlinespace
+7 & Falácia da ausência de defeitos & Um sistema sem defeitos conhecidos pode, mesmo assim, não atender às necessidades do usuário. \\
+\bottomrule
+\end{tabularx}
+
+\fonte{adaptado de ISTQB (2023).}
+\end{table}
+
 % =====================================================================
 % REFERÊNCIAS
 % =====================================================================
