@@ -405,6 +405,18 @@ Um dos princípios do Manifesto Ágil afirma que a atenção contínua à excel�
 
 O XP se distingue dos demais métodos ágeis por descrever práticas de engenharia. Beck e Andres (2004) apresentam, entre outras, a programação em pares, em que duas pessoas trabalham no mesmo código e uma revisa o que a outra escreve em tempo real; o desenvolvimento orientado a testes; a refatoração frequente, para manter o código simples; e a integração contínua, em que as alterações são integradas e testadas várias vezes ao dia. Como o Scrum e o Kanban não prescrevem práticas de engenharia, muitas equipes que usam esses métodos adotam as práticas do XP para cuidar da qualidade técnica.
 
+\subsection{Definição de Pronto e integração contínua}
+
+Cada incremento entregue ao fim de um ciclo precisa cumprir a Definição de Pronto (\textit{Definition of Done}, DoD), que inclui critérios como cobertura de testes, revisão de código aprovada e ausência de defeitos críticos conhecidos. No Scrum, a Definição de Pronto é o compromisso associado ao Incremento: um item que não a cumpre não pode ser liberado nem apresentado na Revisão da Sprint (SCHWABER; SUTHERLAND, 2020).
+
+Para entregar com frequência sem desestabilizar o sistema, as equipes ágeis se apoiam na cultura DevOps e em esteiras automatizadas de Integração Contínua e Entrega Contínua (CI/CD). A cada novo envio de código ao controle de versão, o servidor de integração compila o sistema, roda os analisadores estáticos e executa milhares de testes automatizados em poucos minutos, bloqueando qualquer alteração que viole as métricas de qualidade definidas (PRESSMAN; MAXIM, 2021; REVISTA CIÊNCIA E SUSTENTABILIDADE, [s.d.]).
+
+\subsection{Métricas de velocidade e estabilidade}
+
+Forsgren, Humble e Kim (2018) analisaram respostas de milhares de profissionais em pesquisas anuais sobre DevOps e propuseram quatro métricas para medir o desempenho da entrega de software: frequência de implantação, tempo de espera para mudanças (do \textit{commit} até a produção), taxa de falha de mudanças e tempo para restaurar o serviço. As duas primeiras medem velocidade; as duas últimas, estabilidade.
+
+O resultado mais relevante para este artigo é que as equipes de alto desempenho se saíram melhor nas quatro métricas ao mesmo tempo, sem trocar estabilidade por velocidade. Os autores associam esse desempenho a práticas como testes automatizados, integração contínua e entregas pequenas, as mesmas discutidas nas seções anteriores (FORSGREN; HUMBLE; KIM, 2018). Esse dado antecipa a discussão da próxima seção.
+
 % =====================================================================
 % REFERÊNCIAS
 % =====================================================================
@@ -429,6 +441,8 @@ CROSBY, Philip B. \textbf{Quality is free}: the art of making quality certain. N
 FAGAN, Michael E. Design and code inspections to reduce errors in program development. \textbf{IBM Systems Journal}, v. 15, n. 3, p. 182-211, 1976.
 
 FATEC. 16 métodos para garantir a qualidade do software e melhorar a entrega. \textbf{Revista Anima Terra}, São Paulo, ed. 21, [s.d.].
+
+FORSGREN, Nicole; HUMBLE, Jez; KIM, Gene. \textbf{Accelerate}: the science of lean software and DevOps. Portland: IT Revolution Press, 2018.
 
 IEEE. \textbf{IEEE Std 730-2014}: IEEE standard for software quality assurance processes. New York: IEEE, 2014.
 
