@@ -456,6 +456,15 @@ Abandonar as práticas de SQA em nome da velocidade também gera dívida técnic
 
 Por isso, a garantia da qualidade protege o orçamento e a previsibilidade dos prazos no médio e no longo prazo, em vez de competir com eles. Os resultados de Forsgren, Humble e Kim (2018), apresentados na seção anterior, apontam na mesma direção.
 
+\subsection{Lições de falhas reais}
+\label{sec:casos}
+
+Três casos bem documentados ajudam a ver como os conceitos discutidos se aplicam na prática. Eles diferem em época, setor e tecnologia, e em todos a falha resultou de defeitos que práticas conhecidas de SQA poderiam ter detectado ou contido.
+
+Entre 1985 e 1987, o Therac-25, um acelerador linear usado em radioterapia, aplicou doses maciças de radiação em pacientes em seis acidentes conhecidos, alguns deles fatais. A investigação de Leveson e Turner (1993) mostrou que o fabricante havia removido travas de segurança de hardware presentes nos modelos anteriores e passado essa proteção ao software, que tinha condições de corrida disparadas quando o operador editava os dados com rapidez. Os autores apontaram ainda reaproveitamento de código sem nova análise, testes insuficientes, ausência de revisão independente e mensagens de erro pouco claras para os operadores. Em termos da ISO/IEC 25010, foi uma falha de segurança operacional (\textit{safety}), característica que a versão de 2023 da norma passou a tratar de forma explícita.
+
+Em 4 de junho de 1996, cerca de 40 segundos após o lançamento, o foguete Ariane 5 desviou da trajetória e se destruiu em seu voo inaugural. Segundo a comissão de investigação, o software do sistema de referência inercial tinha sido reaproveitado do Ariane 4 e convertia um valor de ponto flutuante de 64 bits em um inteiro de 16 bits com sinal. Como a trajetória do Ariane 5 gerava valores de velocidade horizontal maiores, o resultado ultrapassou o limite do inteiro, a exceção não foi tratada e os dois sistemas de referência, o principal e o reserva, falharam pelo mesmo motivo. O computador de bordo passou então a interpretar dados de diagnóstico como dados de voo. A função que falhou não tinha utilidade depois da decolagem. A comissão recomendou revisar as premissas do software reaproveitado e testá-lo com dados realistas da nova trajetória (LIONS \textit{et al.}, 1996).
+
 % =====================================================================
 % REFERÊNCIAS
 % =====================================================================
@@ -494,6 +503,10 @@ ISO/IEC. \textbf{ISO/IEC 25010:2023}: systems and software engineering: systems 
 ISTQB. \textbf{Certified tester foundation level syllabus}: version 4.0. [\textit{S. l.}]: International Software Testing Qualifications Board, 2023.
 
 KOSCIANSKI, André; SOARES, Michel dos Santos. \textbf{Qualidade de software}: aprenda as metodologias e técnicas mais modernas para o desenvolvimento de software. 2. ed. São Paulo: Novatec, 2007.
+
+LEVESON, Nancy G.; TURNER, Clark S. An investigation of the Therac-25 accidents. \textbf{Computer}, v. 26, n. 7, p. 18-41, jul. 1993.
+
+LIONS, Jacques-Louis \textit{et al}. \textbf{Ariane 5 flight 501 failure}: report by the inquiry board. Paris: European Space Agency, 1996.
 
 MCCABE, Thomas J. A complexity measure. \textbf{IEEE Transactions on Software Engineering}, v. SE-2, n. 4, p. 308-320, dez. 1976.
 
