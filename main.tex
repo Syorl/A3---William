@@ -418,6 +418,45 @@ Forsgren, Humble e Kim (2018) analisaram respostas de milhares de profissionais 
 O resultado mais relevante para este artigo é que as equipes de alto desempenho se saíram melhor nas quatro métricas ao mesmo tempo, sem trocar estabilidade por velocidade. Os autores associam esse desempenho a práticas como testes automatizados, integração contínua e entregas pequenas, as mesmas discutidas nas seções anteriores (FORSGREN; HUMBLE; KIM, 2018). Esse dado antecipa a discussão da próxima seção.
 
 % =====================================================================
+% 6 QUALIDADE, CUSTO E PRAZO
+% =====================================================================
+\section{Relação entre qualidade, custo e prazo}
+\label{sec:custo}
+
+\subsection{Custo da Qualidade}
+
+Muitos gestores acreditam que cortar atividades de garantia da qualidade, como testes automatizados, documentação de arquitetura e revisões de código, acelera a primeira entrega e barateia o desenvolvimento. A literatura de Engenharia de Software contesta essa ideia com o modelo do Custo da Qualidade (\textit{Cost of Quality}, CoQ) e com a curva de custo relativo de correção de defeitos de Boehm (1981) (KOSCIANSKI; SOARES, 2007; PRESSMAN; MAXIM, 2021).
+
+O Custo da Qualidade se divide em custos de conformidade e custos de não conformidade, como mostra o Quadro~\ref{quadro:coq} (OLIVEIRA JUNIOR, 2020).
+
+\begin{table}[htbp]
+\centering
+\caption{Componentes do Custo da Qualidade}
+\label{quadro:coq}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{3.4cm} >{\raggedright\arraybackslash}p{2.6cm} X}
+\toprule
+\textbf{Grupo} & \textbf{Categoria} & \textbf{Exemplos} \\
+\midrule
+Conformidade & Prevenção & Planejamento, treinamento, engenharia de requisitos. \\
+ & Avaliação & Revisões, testes, ferramentas de automação. \\
+\addlinespace
+Não conformidade & Falhas internas & Retrabalho para corrigir defeitos encontrados antes da entrega. \\
+ & Falhas externas & Suporte emergencial, perda de dados, indisponibilidade, processos judiciais e dano à reputação após o lançamento. \\
+\bottomrule
+\end{tabularx}
+
+\fonte{elaborado pelo autor com base em Oliveira Junior (2020).}
+\end{table}
+
+A experiência acumulada na indústria mostra que o custo de corrigir um defeito cresce em progressão geométrica à medida que o projeto avança. Corrigir um erro de lógica na definição dos requisitos ou no início da codificação custa dezenas, às vezes centenas de vezes menos do que corrigir o mesmo defeito com o sistema já em produção (BOEHM, 1981; PRESSMAN; MAXIM, 2021). Crosby (1979) resumiu esse raciocínio na tese de que a qualidade é gratuita: o que custa caro é a não conformidade, isto é, tudo o que se gasta por não ter feito certo da primeira vez.
+
+\subsection{Dívida técnica}
+
+Abandonar as práticas de SQA em nome da velocidade também gera dívida técnica (\textit{technical debt}). O termo foi proposto por Cunningham (1992), que comparou o código entregue às pressas a um empréstimo: ele adianta a entrega, mas cobra juros na forma de esforço extra a cada alteração, até ser quitado com refatoração. Conforme código mal estruturado e sem testes se acumula, o sistema fica difícil de manter: cada alteração exige muito esforço de compreensão e introduz novos defeitos, a equipe passa a entregar menos e os prazos e orçamentos dos ciclos seguintes estouram (SOMMERVILLE, 2019). O relatório do CISQ estimou a dívida técnica acumulada nos sistemas dos Estados Unidos em cerca de US\$ 1,52 trilhão em 2022 (KRASNER, 2022).
+
+Por isso, a garantia da qualidade protege o orçamento e a previsibilidade dos prazos no médio e no longo prazo, em vez de competir com eles. Os resultados de Forsgren, Humble e Kim (2018), apresentados na seção anterior, apontam na mesma direção.
+
+% =====================================================================
 % REFERÊNCIAS
 % =====================================================================
 \section*{Referências}
@@ -434,9 +473,13 @@ BECK, Kent. \textbf{Test-driven development}: by example. Boston: Addison-Wesley
 
 BECK, Kent; ANDRES, Cynthia. \textbf{Extreme programming explained}: embrace change. 2. ed. Boston: Addison-Wesley, 2004.
 
+BOEHM, Barry W. \textbf{Software engineering economics}. Englewood Cliffs: Prentice-Hall, 1981.
+
 COHN, Mike. \textbf{Succeeding with agile}: software development using Scrum. Boston: Addison-Wesley, 2009.
 
 CROSBY, Philip B. \textbf{Quality is free}: the art of making quality certain. New York: McGraw-Hill, 1979.
+
+CUNNINGHAM, Ward. The WyCash portfolio management system. \textit{In}: CONFERENCE ON OBJECT-ORIENTED PROGRAMMING SYSTEMS, LANGUAGES, AND APPLICATIONS (OOPSLA), 1992, Vancouver. \textbf{Addendum to the proceedings}. New York: ACM, 1992.
 
 FAGAN, Michael E. Design and code inspections to reduce errors in program development. \textbf{IBM Systems Journal}, v. 15, n. 3, p. 182-211, 1976.
 
