@@ -120,6 +120,21 @@ Professor: \professor
 \vspace{0.5cm}
 
 % =====================================================================
+% RESUMO / ABSTRACT
+% =====================================================================
+\begin{singlespace}
+\noindent\textbf{RESUMO}
+
+\noindent Bancos, telecomunicações, equipamentos médicos e sistemas aeroespaciais dependem de software, e uma falha nesses sistemas pode interromper a operação de uma organização ou colocar pessoas em risco. A Garantia da Qualidade de Software (\textit{Software Quality Assurance}, SQA) é a área da Engenharia de Software que procura evitar que defeitos surjam ao longo do ciclo de desenvolvimento, em vez de apenas encontrá-los no fim. Este artigo analisa como práticas, processos e estratégias de qualidade ajudam a prevenir, identificar e reduzir falhas na construção de sistemas, e como a qualidade se relaciona com custo e prazo. A pesquisa é exploratória e descritiva, baseada em revisão bibliográfica de livros de referência, de normas técnicas como a ISO/IEC 25010:2023 e de relatórios de investigação de falhas reais. São discutidos os modelos de maturidade CMMI e MPS.BR, as métricas de qualidade, as revisões de código, as técnicas e os níveis de teste, a gestão de defeitos e a qualidade em metodologias ágeis. Os casos do Therac-25, do voo 501 do Ariane 5 e da atualização defeituosa da CrowdStrike em 2024 ilustram como a falta de práticas de garantia da qualidade se converte em prejuízo. Conclui-se que processos estruturados de SQA, adotados desde o início do projeto, reduzem o retrabalho, tornam os cronogramas mais previsíveis e resultam em produtos que atendem melhor aos requisitos funcionais e não funcionais.
+
+\vspace{0.3cm}
+\noindent\textbf{Palavras-chave:} garantia da qualidade de software; prevenção de falhas; testes de software; ISO/IEC 25010; metodologias ágeis.
+
+\vspace{0.3cm}
+\noindent\textbf{Keywords:} software quality assurance; failure prevention; software testing; ISO/IEC 25010; agile methodologies.
+\end{singlespace}
+
+% =====================================================================
 % 1 INTRODUÇÃO
 % =====================================================================
 \section{Introdução}
@@ -487,6 +502,20 @@ CrowdStrike (2024) & Diferença entre o número de campos esperado pelo sensor e
 \end{table}
 
 Os três casos seguem um padrão parecido: uma premissa que ninguém verificou (a proteção do hardware, o limite numérico, o formato do arquivo) e a falta de uma barreira que detectasse o problema antes de ele chegar à operação. As práticas que poderiam ter interceptado esses defeitos, como revisão de premissas, análise de valor-limite, testes de regressão e implantação gradual, já estavam descritas na literatura da área quando os incidentes ocorreram.
+
+% =====================================================================
+% 7 CONSIDERAÇÕES FINAIS
+% =====================================================================
+\section{Considerações finais}
+\label{sec:conclusao}
+
+Este artigo mostrou que a Garantia da Qualidade de Software é parte central da Engenharia de Software atual e que sua eficácia depende de trocar a correção reativa pela prevenção de falhas. A qualidade de um sistema não pode ser assegurada apenas por testes feitos no fim do projeto; ela resulta da combinação contínua de normas, planejamento antecipado, verificação estática e validação dinâmica automatizada.
+
+Quanto aos objetivos específicos, a distinção entre erro, defeito e falha, e entre garantia, controle e teste, mostrou que a SQA atua sobre o processo, antes de o defeito existir. Os modelos CMMI e MPS.BR exigem a garantia da qualidade já em seus primeiros níveis, e a ISO/IEC 25010:2023, junto com métricas como a complexidade ciclomática e a eficiência na remoção de defeitos, dá critérios objetivos para avaliar o produto. Trazer a qualidade para a fase de requisitos (\textit{Shift-Left}), revisar o código em pares, projetar testes com técnicas de caixa-preta e caixa-branca, organizá-los segundo a Pirâmide de Testes e automatizar a verificação em esteiras de integração contínua permite interceptar erros humanos antes que cheguem ao usuário final como falhas críticas.
+
+Respondendo à pergunta de pesquisa, qualidade, custo e prazo não se opõem quando gerenciados segundo os princípios da SQA. Investir de forma consistente em prevenção reduz o retrabalho, contém a dívida técnica e evita os custos elevados das falhas externas em produção. Os casos do Therac-25, do Ariane 5 e da CrowdStrike mostram o que acontece quando essas barreiras faltam, e os dados de Forsgren, Humble e Kim (2018) indicam que as equipes que investem nelas entregam mais rápido e com mais estabilidade.
+
+Este estudo tem limitações. Por ser uma revisão bibliográfica narrativa, não seguiu um protocolo sistemático de busca e não produziu dados empíricos próprios, de modo que as relações entre práticas de SQA e resultados de custo e prazo foram tomadas da literatura consultada. Como trabalhos futuros, sugere-se um estudo de caso em uma equipe de desenvolvimento, medindo indicadores como a eficiência na remoção de defeitos e as métricas de entrega antes e depois da adoção de revisão de código e integração contínua, e uma pesquisa com profissionais sobre o grau de adoção dessas práticas em empresas brasileiras de software.
 
 % =====================================================================
 % REFERÊNCIAS
