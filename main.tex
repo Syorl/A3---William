@@ -465,6 +465,29 @@ Entre 1985 e 1987, o Therac-25, um acelerador linear usado em radioterapia, apli
 
 Em 4 de junho de 1996, cerca de 40 segundos após o lançamento, o foguete Ariane 5 desviou da trajetória e se destruiu em seu voo inaugural. Segundo a comissão de investigação, o software do sistema de referência inercial tinha sido reaproveitado do Ariane 4 e convertia um valor de ponto flutuante de 64 bits em um inteiro de 16 bits com sinal. Como a trajetória do Ariane 5 gerava valores de velocidade horizontal maiores, o resultado ultrapassou o limite do inteiro, a exceção não foi tratada e os dois sistemas de referência, o principal e o reserva, falharam pelo mesmo motivo. O computador de bordo passou então a interpretar dados de diagnóstico como dados de voo. A função que falhou não tinha utilidade depois da decolagem. A comissão recomendou revisar as premissas do software reaproveitado e testá-lo com dados realistas da nova trajetória (LIONS \textit{et al.}, 1996).
 
+Em 19 de julho de 2024, a CrowdStrike distribuiu uma atualização de conteúdo para o Falcon, seu software de segurança para Windows. O sensor esperava 20 campos de entrada, e o novo arquivo de configuração, chamado \textit{Channel File 291}, fornecia 21. A diferença provocou uma leitura de memória fora dos limites e o travamento dos computadores (CROWDSTRIKE, 2024). A Microsoft estimou em cerca de 8,5 milhões o número de dispositivos Windows afetados (WESTON, 2024). Entre as medidas anunciadas pela empresa estão testes automatizados para todos os tipos de modelo de conteúdo, validação do número de campos de entrada, verificação de limites no interpretador e implantação em anéis sucessivos, em que cada atualização passa por grupos menores de máquinas antes de chegar a toda a base de clientes (CROWDSTRIKE, 2024). O Quadro~\ref{quadro:casos} resume os três casos.
+
+\begin{table}[htbp]
+\centering
+\caption{Falhas reais e práticas de SQA relacionadas}
+\label{quadro:casos}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{2.8cm} >{\raggedright\arraybackslash}p{5.4cm} X}
+\toprule
+\textbf{Caso} & \textbf{Defeito principal} & \textbf{Práticas de SQA relacionadas} \\
+\midrule
+Therac-25 (1985-1987) & Condições de corrida no software, depois da remoção das travas de hardware. & Análise de riscos de segurança operacional, revisão independente, testes de concorrência. \\
+\addlinespace
+Ariane 5 (1996) & Estouro em conversão numérica de código reaproveitado sem nova análise. & Revisão das premissas do código reutilizado, análise de valor-limite, testes com dados realistas. \\
+\addlinespace
+CrowdStrike (2024) & Diferença entre o número de campos esperado pelo sensor e o fornecido na atualização. & Validação de entradas, testes de regressão automatizados, implantação gradual. \\
+\bottomrule
+\end{tabularx}
+
+\fonte{elaborado pelo autor com base em Leveson e Turner (1993), Lions \textit{et al.} (1996) e CrowdStrike (2024).}
+\end{table}
+
+Os três casos seguem um padrão parecido: uma premissa que ninguém verificou (a proteção do hardware, o limite numérico, o formato do arquivo) e a falta de uma barreira que detectasse o problema antes de ele chegar à operação. As práticas que poderiam ter interceptado esses defeitos, como revisão de premissas, análise de valor-limite, testes de regressão e implantação gradual, já estavam descritas na literatura da área quando os incidentes ocorreram.
+
 % =====================================================================
 % REFERÊNCIAS
 % =====================================================================
